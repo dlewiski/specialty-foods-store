@@ -1,5 +1,9 @@
 <div class="container">
   <h1><%= @product.name %></h1>
+
+  <% @reviews.each do |review| %>
+      <h3>Author: <%= review.author %> </h3>
+  <% end %>
 </div>
 
 
