@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
   root 'landing#index'
-  resources :products
+  resources :products do
+    resources :reviews
+  end
 end
