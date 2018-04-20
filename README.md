@@ -27,6 +27,7 @@
   * nav bar in index file will have a link to add a new product and return to the welcome page(this will be an option in every nav bar)
   * user can click on the each product to see its detail
   * once in the detail view of each product, change nav bar to include a delete and update link, as a link to add a review
+  * include ActionView::Helpers::NumberHelper to show proper display for cost of the product, then use the number_to_currency method
 
 ### Create reviews views
   * have a new.html.erb file which will have the form to add a review on the show product view
