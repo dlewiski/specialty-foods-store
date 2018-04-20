@@ -5,4 +5,8 @@ class Review <ActiveRecord::Base
 
   validates_inclusion_of :rating, in: 1..5
   validates_length_of :content_body, in: 50..250
+
+  def set_product_id
+    self.product_id = rand(353..402)
+  end
 end

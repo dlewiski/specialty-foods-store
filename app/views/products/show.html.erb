@@ -3,7 +3,9 @@
   <h1><%= @product.id %></h1>
 
   <% @reviews.each do |review| %>
+
       <h3>Author: <%= review.author %> </h3>
+      <h3>Product ID: <%= review.product_id %> </h3>
   <% end %>
 </div>
 
