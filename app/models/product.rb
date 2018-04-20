@@ -4,6 +4,14 @@ class Product < ActiveRecord::Base
   has_many :reviews
   validates :name, :cost, :origin, :presence => true
 
+  scope :most_reviews, -> {(
+    select("products.id, products.name, products.cost, products.origin, count(reviews.id) as reviews_count")
+    .joins(:reviews)
+    .group("products.id")
+    .order("reviews_count DESC")
+    .limit(1)
+    )}
+
   def convert_cost
     self.cost = number_to_currency(self.cost)
   end

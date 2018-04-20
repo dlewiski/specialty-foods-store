@@ -3,6 +3,10 @@
   <h1>Welcome to the sustainability food store!</h1>
   <h3>About us:</h3>
   <p>We provide the highest quality, most nutritious food on the market with the smallest environmental impact of any other company</p>
+
+  <% @products.each do |product| %>
+  <h3><%= product.name %></h3>
+  <% end %>
 </div>
 
 

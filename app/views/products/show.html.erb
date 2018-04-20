@@ -3,11 +3,16 @@
   <h1><%= @product.id %></h1>
 
   <% @reviews.each do |review| %>
-
+    <% if review.product_id == @product.id %>
       <h3>Author: <%= review.author %> </h3>
-      <h3>Product ID: <%= review.product_id %> </h3>
+      <p><%= review.content_body %></p>
+      <% end %>
   <% end %>
+  <br>
+
+  <button type="button" name="button">Add a review to this product</button>
 </div>
+
 
 
 <% content_for(:navbar) do %>
