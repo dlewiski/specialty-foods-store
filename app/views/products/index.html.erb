@@ -1,10 +1,11 @@
 <div class="container">
   <h1>Check out our amazing low impact products!</h1>
+  <br>
 
   <% @products.each do |product| %>
-  <h4><%= product.name %></h4>
-  <h4><%= product.convertCost %></h4>
-  <h4><%= product.setOriginUSA %></h4>
+  <h4>Product: <%= product.name %></h4>
+  <h4> Cost: <%= product.convertCost %></h4>
+  <h4>Country of Origin: <%= product.setOriginUSA %></h4>
   <br>
   <% end %>
 </div>
