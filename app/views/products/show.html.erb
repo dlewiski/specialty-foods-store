@@ -1,15 +1,6 @@
-<h1>Add a new product</h1>
-
-<%= render('products/form') %>
-
-<% if @product.errors.any? %>
-  <h3>Oops there were some errors. Please try again:</h3>
-  <ul>
-    <% @product.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
-    <% end %>
-  </ul>
-<% end %>
+<div class="container">
+  <h1><%= @product.name %></h1>
+</div>
 
 
 <% content_for(:navbar) do %>
