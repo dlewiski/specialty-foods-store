@@ -1,6 +1,6 @@
 class Review <ActiveRecord::Base
 
-  belongs_to :product
+  belongs_to :product, optional: true
   validates :product_id, :author, :content_body, :rating, :presence => true
 
   validates_inclusion_of :rating, in: 1..5

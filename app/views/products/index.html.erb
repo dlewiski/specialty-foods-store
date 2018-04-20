@@ -4,8 +4,8 @@
 
   <% @products.each do |product| %>
   <h4>Product: <%= link_to product.name, product_path(product) %></h4>
-  <h4> Cost: <%= product.convertCost %></h4>
-  <h4>Country of Origin: <%= product.setOriginUSA %></h4>
+  <h4> Cost: <%= product.convert_cost %></h4>
+  <h4>Country of Origin: <%= product.set_origin_USA %></h4>
   <br>
   <% end %>
 </div>
