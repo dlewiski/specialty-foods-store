@@ -1,6 +1,12 @@
-<h1>Check out our amazing low impact products!</h1>
+<div class="container">
+  <h1>Check out our amazing low impact products!</h1>
 
-
+  <% @products.each do |product| %>
+  <h4><%= product.name %></h4>
+  <h4><%= product.cost %></h4>
+  <h4><%= product.origin %></h4>
+  <% end %>
+</div>
 
 <% content_for(:navbar) do %>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
