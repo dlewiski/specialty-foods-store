@@ -1,6 +1,6 @@
-<div class="container">
-  <h1><%= @product.name %></h1>
-</div>
+<h1>Edit <%= @product.name %></h1>
+
+<%= render('products/form') %>
 
 
 <% content_for(:navbar) do %>
@@ -15,11 +15,9 @@
         <a class="nav-link" href="/products">All Products</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/products/<%= @product.id %>/edit">EDIT</a>
+        <a class="nav-link" href="/products/<%= @product.id %>"><%= @product.name %></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/products">DELETE</a>
-      </li>
+
     </ul>
   </div>
 </nav>
