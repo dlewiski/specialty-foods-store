@@ -3,8 +3,9 @@
 
   <% @products.each do |product| %>
   <h4><%= product.name %></h4>
-  <h4><%= product.cost %></h4>
-  <h4><%= product.origin %></h4>
+  <h4><%= product.convertCost %></h4>
+  <h4><%= product.setOriginUSA %></h4>
+  <br>
   <% end %>
 </div>
 
