@@ -1,6 +1,8 @@
 class LandingController < ApplicationController
   def index
     @products = Product.all
-    @products = @products.most_reviews
+    @reviewedProducts = @products.most_reviews
+    @recentProducts = @products.most_recent
+    @USAProducts = @products.made_in_USA
   end
 end

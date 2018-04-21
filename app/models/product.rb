@@ -12,6 +12,11 @@ class Product < ActiveRecord::Base
     .limit(1)
     )}
 
+  scope :most_recent, -> {order(created_at: :desc).limit(3)}
+
+  scope :made_in_USA, -> {where(origin: "USA")}
+
+
   def convert_cost
     self.cost = number_to_currency(self.cost)
   end
